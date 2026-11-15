@@ -8,6 +8,7 @@
 <meta name="theme-color" content="#0F172A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root{
   --bg:#F5F7FC; --surface:#FFFFFF; --ink:#0F172A; --muted:#5B6678; --line:#E2E8F2;
@@ -27,7 +28,6 @@ a{color:inherit;text-decoration:none}
 button,select,input{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none}
 .wrap{width:min(1160px,92%);margin:0 auto}
-svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 section{padding:92px 0;position:relative}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:12px}
 .eyebrow::before{content:"";width:18px;height:2px;background:var(--gold);border-radius:2px}
@@ -67,7 +67,7 @@ nav.links a:hover::after{width:100%}
 .hr{display:flex;gap:8px;align-items:center}
 .pill{height:38px;min-width:38px;padding:0 13px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:13px;font-weight:600;display:grid;place-items:center;transition:transform .2s,border-color .2s}
 .pill:hover{transform:translateY(-1px);border-color:var(--blue)}
-.menu{display:none;font-size:18px}
+.menu{display:none;font-size:16px}
 @media(max-width:940px){
   nav.links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:10px 5% 18px;box-shadow:var(--shadow)}
   nav.links.open{display:flex;animation:dropIn .25s ease}
@@ -92,8 +92,8 @@ nav.links a:hover::after{width:100%}
 .hero p.lead{color:#C8D3EC;font-size:18px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.trust span{font-size:13px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);display:inline-flex;align-items:center;gap:7px}
-.trust span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.trust span{font-size:13px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);display:inline-flex;align-items:center;gap:8px}
+.trust span i{color:var(--gold);font-size:13px}
 
 /* Hero entrance stagger */
 .hero-anim{opacity:0;transform:translateY(18px);animation:heroIn .7s cubic-bezier(.2,.8,.2,1) forwards}
@@ -138,12 +138,11 @@ nav.links a:hover::after{width:100%}
 .bar{height:5px;background:#E3E8F1;border-radius:5px;margin:6px 0 12px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#2563EB);border-radius:5px}
 .gpa-big{font-family:Sora;font-size:46px;font-weight:800;color:#1E3A8A;text-align:center;margin:14px 0 2px}
 
-/* phone screen dots */
 .pdots{display:flex;gap:8px;justify-content:center;margin-top:18px;position:relative;z-index:4}
 .pdots button{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.3);transition:width .3s,background .3s}
 .pdots button.on{width:24px;background:var(--gold)}
 
-.float{position:absolute;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);color:#0F172A;border-radius:16px;padding:10px 15px;font-size:12px;font-weight:700;box-shadow:0 18px 40px rgba(0,0,0,.3);animation:float 5s ease-in-out infinite;z-index:6;border:1px solid rgba(255,255,255,.6)}
+.float{position:absolute;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);color:#0F172A;border-radius:16px;padding:10px 15px;font-size:12px;font-weight:700;box-shadow:0 18px 40px rgba(0,0,0,.3);animation:float 5s ease-in-out infinite;z-index:6;border:1px solid rgba(255,255,255,.6);display:inline-flex;align-items:center;gap:7px}
 .float.f1{left:-4%;top:15%}.float.f2{right:-4%;top:46%;animation-delay:-2s}.float.f3{left:0%;bottom:13%;animation-delay:-3.5s}
 
 @media(max-width:940px){
@@ -174,7 +173,7 @@ nav.links a:hover::after{width:100%}
 .fc::before{content:"";position:absolute;inset:0;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(37,99,235,.09),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
 .fc:hover::before{opacity:1}
 .fc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--blue) 45%,var(--line))}
-.fc .ic{width:48px;height:48px;border-radius:15px;background:var(--chip);color:var(--sel);display:grid;place-items:center;margin-bottom:18px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.fc .ic{width:48px;height:48px;border-radius:15px;background:var(--chip);color:var(--sel);display:grid;place-items:center;margin-bottom:18px;font-size:20px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
 .fc:hover .ic{transform:scale(1.1) rotate(-4deg)}
 .fc.hot{border-color:rgba(242,177,52,.5);background:linear-gradient(180deg,color-mix(in srgb,var(--gold) 7%,var(--surface)),var(--surface))}
 .fc.hot .ic{background:linear-gradient(135deg,#FFD166,var(--gold));color:#0F172A;box-shadow:0 8px 18px rgba(242,177,52,.3)}
@@ -271,22 +270,57 @@ summary::after{content:"+";color:var(--gold-ink);font-size:22px;line-height:1;tr
 details[open] summary::after{content:"–"}
 details p{margin-top:10px;color:var(--muted);font-size:15px}
 
-/* cta + footer */
+/* cta */
 .final{background:radial-gradient(700px 300px at 80% 0%,rgba(37,99,235,.45),transparent),linear-gradient(155deg,#070B16,#162A6B);color:#fff;border-radius:34px;padding:64px 28px;text-align:center;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
 .final h2{font-size:clamp(26px,4.4vw,46px);max-width:18ch;margin:0 auto 14px}
 .final p{color:#C8D3EC;max-width:48ch;margin:0 auto 28px}
 .final .cta{justify-content:center}
 
-footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);background:var(--surface)}
-.fl{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
-.fl-brand{display:flex;flex-direction:column;gap:6px}
-.fl-right{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
-.fl nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-.fl nav a:hover{color:var(--ink)}
-.tg-pill{width:42px;height:42px;display:inline-grid;place-items:center;border-radius:999px;background:#229ED9;color:#fff;box-shadow:0 8px 20px rgba(34,158,217,.32);transition:transform .25s,box-shadow .25s}
-.tg-pill:hover{transform:translateY(-2px) scale(1.06);box-shadow:0 12px 26px rgba(34,158,217,.45)}
-.tg-pill svg{width:20px;height:20px;fill:currentColor;margin-right:2px}
-@media(max-width:640px){.fl{flex-direction:column;align-items:flex-start}}
+/* WORLD-CLASS FOOTER */
+.site-footer{background:radial-gradient(900px 360px at 90% 0%,rgba(37,99,235,.18),transparent 65%),linear-gradient(180deg,#090F20 0%,#050812 100%);color:#CBD5E1;position:relative;border-top:1px solid rgba(255,255,255,.08)}
+.site-footer::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--blue),transparent);opacity:.8}
+
+/* Top footer banner */
+.ft-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;padding:34px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft-top-left{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.ft-tagline{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(242,177,52,.12);border:1px solid rgba(242,177,52,.3);color:#FFE08A;font-size:13px;font-weight:600}
+.ft-socials{display:flex;gap:10px;align-items:center}
+.soc-btn{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#E2E8F0;display:grid;place-items:center;font-size:16px;transition:transform .25s,background .25s,color .25s,border-color .25s}
+.soc-btn:hover{transform:translateY(-3px);color:#fff;border-color:transparent}
+.soc-btn.tg:hover{background:#229ED9;box-shadow:0 8px 20px rgba(34,158,217,.35)}
+.soc-btn.ph:hover{background:#16A34A;box-shadow:0 8px 20px rgba(22,163,74,.35)}
+.soc-btn.em:hover{background:var(--blue);box-shadow:0 8px 20px rgba(37,99,235,.35)}
+.soc-btn.up:hover{background:var(--gold);color:#0F172A;box-shadow:0 8px 20px rgba(242,177,52,.35)}
+
+/* Footer columns */
+.ft-grid{display:grid;grid-template-columns:1.3fr .8fr .8fr 1.2fr;gap:36px;padding:48px 0}
+@media(max-width:920px){.ft-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.ft-grid{grid-template-columns:1fr;gap:28px}}
+.ft-col h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ft-col h4::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.ft-about{font-size:14px;color:#94A3B8;max-width:34ch;line-height:1.7;margin-bottom:18px}
+.ft-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#E2E8F0}
+.ft-badge i{color:var(--gold)}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:11px;font-size:14px}
+.ft-links a{color:#94A3B8;display:inline-flex;align-items:center;gap:9px;transition:color .2s,transform .2s}
+.ft-links a i{font-size:12px;color:var(--gold);opacity:.8}
+.ft-links a:hover{color:#fff;transform:translateX(4px)}
+
+.ft-contact{display:flex;flex-direction:column;gap:12px}
+.ft-citem{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:border-color .2s,background .2s}
+.ft-citem:hover{background:rgba(255,255,255,.07);border-color:rgba(242,177,52,.4)}
+.ft-citem .cic{width:34px;height:34px;border-radius:10px;background:rgba(242,177,52,.14);color:var(--gold);display:grid;place-items:center;flex-shrink:0;font-size:14px}
+.ft-citem small{display:block;font-size:11px;color:#64748B;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.ft-citem span,.ft-citem a{font-size:13.5px;color:#E2E8F0;font-weight:500;word-break:break-word}
+
+/* Special Bottom Copyright Design */
+.ft-bottom{padding:20px 0 28px}
+.ft-copy-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding:16px 22px;border-radius:18px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(37,99,235,.09),rgba(242,177,52,.07));border:1px solid rgba(255,255,255,.1)}
+.ft-copy-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;color:#CBD5E1}
+.ft-alpha{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:999px;background:linear-gradient(135deg,rgba(242,177,52,.2),rgba(242,177,52,.06));border:1px solid rgba(242,177,52,.4);color:#FFD878;font-family:Sora,sans-serif;font-weight:700;font-size:12.5px}
+.ft-copy-right{display:flex;align-items:center;gap:14px;font-size:13px;color:#94A3B8}
+.ft-copy-right i{color:#EF4444}
+@media(max-width:640px){.ft-copy-bar{flex-direction:column;align-items:flex-start}}
 
 /* scroll reveal */
 .rv{opacity:0;transform:translateY(26px) scale(.985);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.75,.2,1)}
@@ -323,9 +357,9 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 
     <div class="hr">
       <button class="pill" id="lang" aria-label="Switch language">አማ</button>
-      <button class="pill" id="theme" aria-label="Toggle dark mode">🌙</button>
-      <a class="btn gold" data-link="app" href="#" style="padding:9px 18px;font-size:14px" data-i18n="download">Download</a>
-      <button class="pill menu" id="menu" aria-label="Menu" aria-expanded="false">☰</button>
+      <button class="pill" id="theme" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a class="btn gold" data-link="app" href="#" style="padding:9px 18px;font-size:14px"><i class="fa-solid fa-download"></i><span data-i18n="download">Download</span></a>
+      <button class="pill menu" id="menu" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
   </div>
 </header>
@@ -341,13 +375,13 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
       <h1 class="hero-anim d1" data-i18n-html="h_title">Pass your exams with <em>everything</em> in one app.</h1>
       <p class="lead hero-anim d2" data-i18n="h_sub">Past exams with explanations, quizzes, live mock exams, video lessons, flashcards, GPA predictor and campus guide. Built by students, for students.</p>
       <div class="cta hero-anim d3">
-        <a class="btn gold" data-link="app" href="#"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg><span data-i18n="download_app">Download the app</span></a>
-        <a class="btn ghost" href="#features" data-i18n="see_features">See all features</a>
+        <a class="btn gold" data-link="app" href="#"><i class="fa-solid fa-download"></i><span data-i18n="download_app">Download the app</span></a>
+        <a class="btn ghost" href="#features"><i class="fa-solid fa-grid-2"></i><span data-i18n="see_features">See all features</span></a>
       </div>
       <div class="trust hero-anim d4">
-        <span data-i18n="t1">Amharic + English explanations</span>
-        <span data-i18n="t2">Works offline</span>
-        <span data-i18n="t3">Light and dark mode</span>
+        <span><i class="fa-solid fa-language"></i><span data-i18n="t1">Amharic + English explanations</span></span>
+        <span><i class="fa-solid fa-wifi"></i><span data-i18n="t2">Works offline</span></span>
+        <span><i class="fa-solid fa-circle-half-stroke"></i><span data-i18n="t3">Light and dark mode</span></span>
       </div>
     </div>
 
@@ -419,9 +453,9 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
         <button data-go="2" aria-label="Slide 3"></button>
       </div>
 
-      <div class="float f1">🔥 5 day streak</div>
-      <div class="float f2">✅ አማርኛ explanation</div>
-      <div class="float f3">⏱ Live mock exam</div>
+      <div class="float f1"><i class="fa-solid fa-fire" style="color:#EA580C"></i> 5 day streak</div>
+      <div class="float f2"><i class="fa-solid fa-circle-check" style="color:#16A34A"></i> አማርኛ explanation</div>
+      <div class="float f3"><i class="fa-solid fa-stopwatch" style="color:#2563EB"></i> Live mock exam</div>
     </div>
   </div>
 </div>
@@ -437,20 +471,20 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   <h2 class="title" data-i18n="f_title">All that a freshman student needs.</h2>
   <p class="lead" data-i18n="f_sub">From the first week to the final exam. No more searching in ten different Telegram groups.</p>
   <div class="fgrid">
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7"/></svg></div><h3>Exam Bank</h3><p>Past mid and final exams by course and year, with correct answers and step by step explanation.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 5h9M8 3v2M5 11c2 0 5-2 6-6M6 9c1 2 3 3 5 3M14 21l4-10 4 10M15.5 18h5"/></svg></div><h3>Amharic + English</h3><p>Hard question? Read the explanation in Amharic or English, whichever helps you understand faster.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/></svg></div><h3>Practice Quizzes</h3><p>Chapter quizzes for Math, Physics, Logic, Geography, English and Psychology. Instant feedback.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg></div><h3>Live Mock Exam</h3><p>Timed exam simulation with a countdown so you feel the real pressure before the real day.</p></div>
-    <div class="fc hot rv"><span class="badge">NEW</span><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9v6l5-3z"/></svg></div><h3>Video Tutor</h3><p>Pick a course, choose a unit, then watch clear lessons with chapters, progress and a quiz at the end.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3zM18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8z"/></svg></div><h3>AI Notebook</h3><p>Ask questions about your study material and get quick explanations when you are stuck.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 3h14v12"/></svg></div><h3>Flashcards</h3><p>Turn key terms and formulas into flashcards and review them in minutes before class.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></div><h3>GPA Predictor</h3><p>Add your courses and credits to see your semester GPA and plan the grade you need.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5V21h16"/></svg></div><h3>Module PDF Reader</h3><p>Read your course modules inside the app. Pick up exactly where you stopped.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 10v3l2 1M9 3h6"/></svg></div><h3>Pomodoro Focus</h3><p>25 minute focus rounds with short breaks. Build a habit and keep your study streak alive.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>Campus Guide</h3><p>Find your way around Jimma University: places, services and useful tips for new students.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg></div><h3>Announcements and Reminders</h3><p>Never miss exam news. Get daily study reminders and read university announcements in one feed.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div><h3>Saved and History</h3><p>Bookmark any question or lesson, and see everything you studied. Saved content works offline.</p></div>
-    <div class="fc rv"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>Placement Practice</h3><p>Check your level with placement style questions and know which subjects need more work.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-file-lines"></i></div><h3>Exam Bank</h3><p>Past mid and final exams by course and year, with correct answers and step by step explanation.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-language"></i></div><h3>Amharic + English</h3><p>Hard question? Read the explanation in Amharic or English, whichever helps you understand faster.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-circle-question"></i></div><h3>Practice Quizzes</h3><p>Chapter quizzes for Math, Physics, Logic, Geography, English and Psychology. Instant feedback.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-stopwatch"></i></div><h3>Live Mock Exam</h3><p>Timed exam simulation with a countdown so you feel the real pressure before the real day.</p></div>
+    <div class="fc hot rv"><span class="badge">NEW</span><div class="ic"><i class="fa-solid fa-circle-play"></i></div><h3>Video Tutor</h3><p>Pick a course, choose a unit, then watch clear lessons with chapters, progress and a quiz at the end.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>AI Tools</h3><p>Smart AI study tools to ask questions, summarize notes, and get quick explanations when you are stuck.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-layer-group"></i></div><h3>Flashcards</h3><p>Turn key terms and formulas into flashcards and review them in minutes before class.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-chart-line"></i></div><h3>GPA Predictor</h3><p>Add your courses and credits to see your semester GPA and plan the grade you need.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-book-open"></i></div><h3>Module PDF Reader</h3><p>Read your course modules inside the app. Pick up exactly where you stopped.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-clock"></i></div><h3>Pomodoro Focus</h3><p>25 minute focus rounds with short breaks. Build a habit and keep your study streak alive.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-map-location-dot"></i></div><h3>Campus Guide</h3><p>Find your way around Jimma University: places, services and useful tips for new students.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-bell"></i></div><h3>Announcements and Reminders</h3><p>Never miss exam news. Get daily study reminders and read university announcements in one feed.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-bookmark"></i></div><h3>Saved and History</h3><p>Bookmark any question or lesson, and see everything you studied. Saved content works offline.</p></div>
+    <div class="fc rv"><div class="ic"><i class="fa-solid fa-wave-square"></i></div><h3>Placement Practice</h3><p>Check your level with placement style questions and know which subjects need more work.</p></div>
   </div>
 </div></section>
 
@@ -521,9 +555,9 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   <h2 class="title" data-i18n="p_title">Start free. Unlock everything when you are ready.</h2>
   <div class="pgrid">
     <div class="plan rv"><h3>Free</h3><div class="pr" data-cfg="freeLabel">Free</div>
-      <ul><li>Selected past exams and quizzes</li><li>First 2 video lessons per course</li><li>GPA predictor and Pomodoro</li><li>Campus guide and announcements</li></ul></div>
+      <ul><li>Selected past exams and quizzes</li><li>1 free video lesson per course</li><li>GPA predictor and Pomodoro</li><li>Campus guide and announcements</li></ul></div>
     <div class="plan pro rv"><h3>Pro</h3><div class="pr" data-cfg="price">Ask on Telegram</div>
-      <ul><li>All exams with full explanations</li><li>All video lessons and quizzes</li><li>Live mock exams</li><li>AI notebook and offline study</li></ul></div>
+      <ul><li>All exams with full explanations</li><li>All video lessons and quizzes</li><li>Live mock exams</li><li>AI tools and offline study</li></ul></div>
   </div>
   <div class="how rv">
     <div><b>1. Pay</b>Send the Pro payment using the method shown in the app.</div>
@@ -552,38 +586,100 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   <h2 data-i18n="c_title">Your next exam starts with today's study.</h2>
   <p data-i18n="c_sub">Join your classmates on JU FreshHub and study with a plan.</p>
   <div class="cta">
-    <a class="btn gold" data-link="app" href="#"><span data-i18n="download_app">Download the app</span></a>
-    <a class="btn ghost" data-link="tg" href="#">Join on Telegram</a>
+    <a class="btn gold" data-link="app" href="#"><i class="fa-solid fa-download"></i><span data-i18n="download_app">Download the app</span></a>
+    <a class="btn ghost" data-link="tg" href="#"><i class="fa-brands fa-telegram"></i><span>Join on Telegram</span></a>
   </div>
 </div></div>
 </main>
 
-<footer>
-  <div class="wrap fl">
-    <div class="fl-brand">
-      <div class="logo" style="font-size:17px">
-        <div class="logo-mark" style="width:30px;height:30px;border-radius:9px">
-          <img class="custom-logo" alt="JU FreshHub logo">
-          <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" style="width:18px;height:18px">
-            <path d="M18 4 31 10v7.5c0 7.6-5.3 13.6-13 15.5C10.3 31.1 5 25.1 5 17.5V10L18 4Z" stroke="#F2B134" stroke-width="2"/>
-            <text x="18" y="21.5" text-anchor="middle" fill="#FFFFFF" font-family="Sora,sans-serif" font-weight="800" font-size="11.5">JU</text>
-          </svg>
-        </div>
-        <span>JU <em>FreshHub</em></span>
+<!-- WORLD-CLASS FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- Top of Footer: JU FreshHub Made by student for student -->
+    <div class="ft-top">
+      <div class="ft-top-left">
+        <a href="#top" class="logo" style="font-size:19px;color:#fff">
+          <div class="logo-mark" style="width:36px;height:36px;border-radius:11px">
+            <img class="custom-logo" alt="JU FreshHub logo">
+            <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" style="width:22px;height:22px">
+              <path d="M18 4 31 10v7.5c0 7.6-5.3 13.6-13 15.5C10.3 31.1 5 25.1 5 17.5V10L18 4Z" stroke="#F2B134" stroke-width="2"/>
+              <text x="18" y="21.5" text-anchor="middle" fill="#FFFFFF" font-family="Sora,sans-serif" font-weight="800" font-size="11.5">JU</text>
+            </svg>
+          </div>
+          <span>JU <em style="color:var(--gold)">FreshHub</em></span>
+        </a>
+        <span class="ft-tagline"><i class="fa-solid fa-graduation-cap"></i> JU FreshHub — Made by students, for students</span>
       </div>
-      <div>© <span id="yr"></span> Alpha Tech Solutions. JU FreshHub. Made by students for students.</div>
+
+      <div class="ft-socials">
+        <a class="soc-btn tg" data-link="tg" href="https://t.me/jufreshhub" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a class="soc-btn ph" data-link="phone" href="tel:+251970837345" aria-label="Call +251970837345"><i class="fa-solid fa-phone"></i></a>
+        <a class="soc-btn em" data-link="mail" href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a class="soc-btn up" href="#top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
     </div>
 
-    <div class="fl-right">
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#tools">Tools</a>
-        <a data-link="mail" href="#">Contact</a>
-        <a href="#top">Back to top</a>
-      </nav>
-      <a class="tg-pill" href="https://t.me/jufreshhub" target="_blank" rel="noopener noreferrer" aria-label="Join JU FreshHub on Telegram">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.6c.3-1.3-.9-2.3-2.1-1.8L2.6 9.5c-1.2.5-1.1 2.2.1 2.6l4.4 1.4 1.7 5.3c.3 1 1.6 1.3 2.4.6l2.5-2.3 4.6 3.4c1 .7 2.4.2 2.7-1.1l2.9-14.8zM9.2 13.2l8.5-5.3c.3-.2.6.2.3.5l-6.9 6.3-.3 3.2-1.4-4.3-.2-.4z"/></svg>
-      </a>
+    <!-- Main Footer Grid -->
+    <div class="ft-grid">
+      <div class="ft-col">
+        <h4>About JU FreshHub</h4>
+        <p class="ft-about">Your complete academic companion at Jimma University. Built to help freshman students pass exams with confidence using past papers, AI tools, video lessons, and smart study planners.</p>
+        <div class="ft-badge"><i class="fa-solid fa-shield-halved"></i> Built for Jimma University Freshmen</div>
+      </div>
+
+      <div class="ft-col">
+        <h4>Explore</h4>
+        <ul class="ft-links">
+          <li><a href="#features"><i class="fa-solid fa-chevron-right"></i> All Features</a></li>
+          <li><a href="#exams"><i class="fa-solid fa-chevron-right"></i> Past Exam Demo</a></li>
+          <li><a href="#video"><i class="fa-solid fa-chevron-right"></i> Video Tutor</a></li>
+          <li><a href="#premium"><i class="fa-solid fa-chevron-right"></i> Free &amp; Pro Plans</a></li>
+          <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="ft-col">
+        <h4>Study Tools</h4>
+        <ul class="ft-links">
+          <li><a href="#tools"><i class="fa-solid fa-calculator"></i> GPA Predictor</a></li>
+          <li><a href="#tools"><i class="fa-solid fa-clock"></i> Pomodoro Timer</a></li>
+          <li><a href="#features"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Tools</a></li>
+          <li><a href="#features"><i class="fa-solid fa-layer-group"></i> Flashcards</a></li>
+          <li><a data-link="app" href="#"><i class="fa-solid fa-mobile-screen-button"></i> Download Android App</a></li>
+        </ul>
+      </div>
+
+      <div class="ft-col">
+        <h4>Contact &amp; Location</h4>
+        <div class="ft-contact">
+          <div class="ft-citem">
+            <div class="cic"><i class="fa-solid fa-location-dot"></i></div>
+            <div><small>Address</small><span>Jimma University Main Campus, Jimma, Ethiopia</span></div>
+          </div>
+          <a class="ft-citem" data-link="phone" href="tel:+251970837345">
+            <div class="cic"><i class="fa-solid fa-phone"></i></div>
+            <div><small>Phone</small><span data-cfg="phone">+251970837345</span></div>
+          </a>
+          <a class="ft-citem" data-link="tg" href="https://t.me/jufreshhub">
+            <div class="cic"><i class="fa-brands fa-telegram"></i></div>
+            <div><small>Telegram Community</small><span>t.me/jufreshhub</span></div>
+          </a>
+          <a class="ft-citem" data-link="mail" href="#">
+            <div class="cic"><i class="fa-solid fa-envelope"></i></div>
+            <div><small>Email Support</small><span data-cfg="email">jufreshhub@gmail.com</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Special Bottom Copyright Design -->
+    <div class="ft-bottom">
+      <div class="ft-copy-bar">
+        <div class="ft-copy-left">
+          <span class="ft-alpha"><i class="fa-solid fa-code"></i> Alpha Tech Solutions</span>
+          <span>© <span id="yr"></span> <strong>JU FreshHub</strong>. All rights reserved.</span>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
@@ -591,9 +687,10 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 <script>
 /* ===== EDIT THESE ===== */
 const CONFIG = {
-  appLink: "#",                               // your APK / Play Store / GitHub Release link
+  appLink: "#",                               // your APK / GitHub Release / Telegram APK link
   telegram: "https://t.me/jufreshhub",
-  email: "you@example.com",
+  phone: "+251970837345",
+  email: "jufreshub@gmail.com",
   price: "Ask on Telegram",                   // e.g. "100 birr"
   freeLabel: "Free",
   logoImage: "ju-logo.png",
@@ -604,7 +701,7 @@ const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelect
 
 document.querySelectorAll('[data-link]').forEach(a=>{
   const k=a.dataset.link;
-  a.href=k==='app'?CONFIG.appLink:k==='tg'?CONFIG.telegram:'mailto:'+CONFIG.email;
+  a.href=k==='app'?CONFIG.appLink:k==='tg'?CONFIG.telegram:k==='phone'?'tel:'+CONFIG.phone:'mailto:'+CONFIG.email;
   if(k==='tg'){a.target='_blank';a.rel='noopener noreferrer';}
 });
 $$('[data-cfg]').forEach(e=>e.textContent=CONFIG[e.dataset.cfg]);
@@ -641,17 +738,21 @@ window.addEventListener('scroll',()=>{
 
 /* Theme + Mobile Menu */
 const store={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
-function setTheme(d){document.body.classList.toggle('dark',d);$('#theme').textContent=d?'☀️':'🌙';store.set('jf-theme',d?'d':'l')}
+function setTheme(d){
+  document.body.classList.toggle('dark',d);
+  $('#theme').innerHTML=d?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';
+  store.set('jf-theme',d?'d':'l');
+}
 setTheme(store.get('jf-theme')?store.get('jf-theme')==='d':matchMedia('(prefers-color-scheme:dark)').matches);
 $('#theme').onclick=()=>setTheme(!document.body.classList.contains('dark'));
 $('#menu').onclick=()=>{
   const open=$('#links').classList.toggle('open');
-  $('#menu').textContent=open?'✕':'☰';
+  $('#menu').innerHTML=open?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>';
   $('#menu').setAttribute('aria-expanded',open);
 };
 $$('#links a').forEach(a=>a.onclick=()=>{
   $('#links').classList.remove('open');
-  $('#menu').textContent='☰';
+  $('#menu').innerHTML='<i class="fa-solid fa-bars"></i>';
   $('#menu').setAttribute('aria-expanded','false');
 });
 
