@@ -113,18 +113,20 @@ nav.links a:hover::after{width:100%}
 .phone-wrap{position:relative;transition:transform .25s ease-out;transform-style:preserve-3d;animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-11px)}}
 .phone{position:relative;width:294px;height:600px;border-radius:42px;background:#F6F8FC;box-shadow:0 0 0 8px #070B16,0 0 0 10px rgba(255,255,255,.12),0 42px 86px rgba(0,0,0,.55);overflow:hidden;display:flex;flex-direction:column;color:#0F172A}
-.ps{height:30px;font-size:10.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;padding:8px 22px 0;position:relative;z-index:5;background:transparent}
+.ps{height:30px;font-size:10.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;padding:8px 22px 0;position:relative;z-index:6;background:transparent;pointer-events:none}
+.phone.full-shot .ps{position:absolute;top:0;left:0;right:0}
+.phone.full-shot .ps span{opacity:0}
 .notch{position:absolute;left:50%;top:8px;transform:translateX(-50%);width:82px;height:20px;border-radius:999px;background:#070B16;display:flex;align-items:center;justify-content:flex-end;padding-right:7px}
 .notch::after{content:"";width:7px;height:7px;border-radius:50%;background:#1E293B;box-shadow:inset 0 0 2px #3B82F6}
 .pscreens{flex:1;position:relative;overflow:hidden}
-.pscr{position:absolute;inset:0;padding:10px 14px;opacity:0;transform:translateX(18px) scale(.97);transition:opacity .45s ease,transform .45s cubic-bezier(.22,1,.36,1);pointer-events:none}
+.pscr{position:absolute;inset:0;padding:12px 14px;opacity:0;transform:translateX(18px) scale(.97);transition:opacity .45s ease,transform .45s cubic-bezier(.22,1,.36,1);pointer-events:none}
 .pscr.on{opacity:1;transform:none;pointer-events:auto}
 .pscr.has-real{padding:0}
 .real-shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:none;z-index:4;background:#0F172A}
 .pscr.has-real .real-shot{display:block}
 .pscr.has-real .mock-ui{display:none}
-.pscr h4{font-size:16px;margin:4px 0 10px}
-.mini{background:#fff;border-radius:14px;padding:10px 12px;margin-bottom:8px;box-shadow:0 6px 16px rgba(15,23,42,.06);font-size:11.5px;display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(15,23,42,.04)}
+.pscr h4{font-size:16px;margin:4px 0 12px}
+.mini{background:#fff;border-radius:14px;padding:11px 12px;margin-bottom:9px;box-shadow:0 6px 16px rgba(15,23,42,.06);font-size:11.5px;display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(15,23,42,.04)}
 .mini b{font-size:12.5px;display:block}
 .mini small{color:#64748B}
 .tag{background:#E9EEFA;color:#1E3A8A;border-radius:999px;padding:3px 9px;font-size:10px;font-weight:700}
@@ -133,18 +135,8 @@ nav.links a:hover::after{width:100%}
 .mplayer svg{position:absolute;inset:0;width:100%;height:100%}
 .mplay{position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px;border-radius:50%;background:#F2B134;display:grid;place-items:center;box-shadow:0 6px 18px rgba(242,177,52,.5)}
 .mplay::after{content:"";border-left:11px solid #0F172A;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
-.bar{height:5px;background:#E3E8F1;border-radius:5px;margin:6px 0 10px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#2563EB);border-radius:5px}
-.gpa-big{font-family:Sora;font-size:46px;font-weight:800;color:#1E3A8A;text-align:center;margin:12px 0 2px}
-.pnavwrap{position:relative;flex:none;height:66px;z-index:5}
-.pnav{height:66px;position:relative;background:#fff;border-radius:20px 20px 0 0;
-  -webkit-mask:radial-gradient(circle at 50% 0,transparent 0 30px,#000 31px);mask:radial-gradient(circle at 50% 0,transparent 0 30px,#000 31px);
-  display:grid;grid-template-columns:1fr 1fr 64px 1fr 1fr;align-items:center;font-size:9.5px;font-weight:600;color:#64748B;text-align:center;padding-top:6px}
-.pnavwrap .orb{position:absolute;left:50%;top:-24px;width:52px;height:52px;margin-left:-26px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#FFD878,#F2B134 55%,#E19A12);border:5px solid #F6F8FC;display:grid;place-items:center;box-shadow:0 8px 18px rgba(242,177,52,.55)}
-.pnavwrap .orb::before{content:"";border-left:13px solid #0F172A;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
-.pnavwrap .orb::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid #F2B134;animation:pulse 2.4s ease-out infinite}
-@keyframes pulse{0%{transform:scale(.85);opacity:.75}100%{transform:scale(1.3);opacity:0}}
-.pnav span{cursor:pointer;transition:color .2s}
-.pnav span.on{color:#1E3A8A;font-weight:800}
+.bar{height:5px;background:#E3E8F1;border-radius:5px;margin:6px 0 12px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#2563EB);border-radius:5px}
+.gpa-big{font-family:Sora;font-size:46px;font-weight:800;color:#1E3A8A;text-align:center;margin:14px 0 2px}
 
 /* phone screen dots */
 .pdots{display:flex;gap:8px;justify-content:center;margin-top:18px;position:relative;z-index:4}
@@ -291,9 +283,9 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 .fl-right{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
 .fl nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 .fl nav a:hover{color:var(--ink)}
-.tg-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#229ED9;color:#fff;font-weight:600;font-size:13.5px;box-shadow:0 8px 20px rgba(34,158,217,.28);transition:transform .25s,box-shadow .25s}
-.tg-pill:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(34,158,217,.4)}
-.tg-pill svg{width:18px;height:18px;fill:currentColor}
+.tg-pill{width:42px;height:42px;display:inline-grid;place-items:center;border-radius:999px;background:#229ED9;color:#fff;box-shadow:0 8px 20px rgba(34,158,217,.32);transition:transform .25s,box-shadow .25s}
+.tg-pill:hover{transform:translateY(-2px) scale(1.06);box-shadow:0 12px 26px rgba(34,158,217,.45)}
+.tg-pill svg{width:20px;height:20px;fill:currentColor;margin-right:2px}
 @media(max-width:640px){.fl{flex-direction:column;align-items:flex-start}}
 
 /* scroll reveal */
@@ -310,8 +302,7 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   <div class="wrap hbar">
     <a href="#top" class="logo" aria-label="JU FreshHub Home">
       <div class="logo-mark">
-        <img id="custom-logo" alt="JU FreshHub logo">
-        <!-- Custom JU Academic Crest + Spark SVG Logo -->
+        <img class="custom-logo" alt="JU FreshHub logo">
         <svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
           <path d="M18 4 31 10v7.5c0 7.6-5.3 13.6-13 15.5C10.3 31.1 5 25.1 5 17.5V10L18 4Z" fill="rgba(255,255,255,0.08)" stroke="#F2B134" stroke-width="1.8"/>
           <text x="18" y="21.5" text-anchor="middle" fill="#FFFFFF" font-family="Sora,sans-serif" font-weight="800" font-size="11.5" letter-spacing="-0.5">JU</text>
@@ -384,6 +375,7 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
                 <div class="mini"><div><b>Logic</b><small>Mid and Final</small></div><span class="tag">Open</span></div>
                 <div class="mini"><div><b>Geography</b><small>አማርኛ + English</small></div><span class="tag g">Pro</span></div>
                 <div class="mini"><div><b>Psychology</b><small>Quiz bank</small></div><span class="tag">Open</span></div>
+                <div class="mini"><div><b>English</b><small>Practice set</small></div><span class="tag">Open</span></div>
               </div>
             </div>
 
@@ -400,6 +392,7 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
                 <div class="bar"><i style="width:48%"></i></div>
                 <div class="mini"><div><b>Kinematics</b><small>14 min</small></div><span class="tag">✓</span></div>
                 <div class="mini"><div><b>Newton's Laws</b><small>21 min</small></div><span class="tag g">Pro</span></div>
+                <div class="mini"><div><b>Work & Energy</b><small>18 min</small></div><span class="tag">Open</span></div>
               </div>
             </div>
 
@@ -409,23 +402,13 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
               <div class="mock-ui">
                 <h4 class="sora">GPA Predictor</h4>
                 <div class="gpa-big">3.68</div>
-                <p style="text-align:center;font-size:11px;color:#64748B;margin-bottom:12px">Semester GPA</p>
+                <p style="text-align:center;font-size:11px;color:#64748B;margin-bottom:14px">Semester GPA</p>
                 <div class="mini"><div><b>Mathematics</b><small>5 credits</small></div><span class="tag">A-</span></div>
                 <div class="mini"><div><b>General Physics</b><small>5 credits</small></div><span class="tag">B+</span></div>
                 <div class="mini"><div><b>English</b><small>3 credits</small></div><span class="tag">A</span></div>
+                <div class="mini"><div><b>Logic</b><small>3 credits</small></div><span class="tag">A</span></div>
               </div>
             </div>
-          </div>
-
-          <div class="pnavwrap">
-            <div class="pnav">
-              <span class="on" data-go="0">Home</span>
-              <span data-go="1">Study</span>
-              <span></span>
-              <span data-go="2">Tools</span>
-              <span data-go="0">Profile</span>
-            </div>
-            <div class="orb"></div>
           </div>
         </div>
       </div>
@@ -580,6 +563,7 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
     <div class="fl-brand">
       <div class="logo" style="font-size:17px">
         <div class="logo-mark" style="width:30px;height:30px;border-radius:9px">
+          <img class="custom-logo" alt="JU FreshHub logo">
           <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" style="width:18px;height:18px">
             <path d="M18 4 31 10v7.5c0 7.6-5.3 13.6-13 15.5C10.3 31.1 5 25.1 5 17.5V10L18 4Z" stroke="#F2B134" stroke-width="2"/>
             <text x="18" y="21.5" text-anchor="middle" fill="#FFFFFF" font-family="Sora,sans-serif" font-weight="800" font-size="11.5">JU</text>
@@ -587,7 +571,7 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
         </div>
         <span>JU <em>FreshHub</em></span>
       </div>
-      <div>© <span id="yr"></span> Alpha Tech Solutions. JU Freshhub Made by students for students.</div>
+      <div>© <span id="yr"></span> Alpha Tech Solutions. JU FreshHub. Made by students for students.</div>
     </div>
 
     <div class="fl-right">
@@ -599,7 +583,6 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
       </nav>
       <a class="tg-pill" href="https://t.me/jufreshhub" target="_blank" rel="noopener noreferrer" aria-label="Join JU FreshHub on Telegram">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.6c.3-1.3-.9-2.3-2.1-1.8L2.6 9.5c-1.2.5-1.1 2.2.1 2.6l4.4 1.4 1.7 5.3c.3 1 1.6 1.3 2.4.6l2.5-2.3 4.6 3.4c1 .7 2.4.2 2.7-1.1l2.9-14.8zM9.2 13.2l8.5-5.3c.3-.2.6.2.3.5l-6.9 6.3-.3 3.2-1.4-4.3-.2-.4z"/></svg>
-        <span></span>
       </a>
     </div>
   </div>
@@ -608,12 +591,12 @@ footer{padding:48px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 <script>
 /* ===== EDIT THESE ===== */
 const CONFIG = {
-  appLink: "#",                               // your APK / Play Store / Firebase App Distribution link
+  appLink: "#",                               // your APK / Play Store / GitHub Release link
   telegram: "https://t.me/jufreshhub",
   email: "you@example.com",
   price: "Ask on Telegram",                   // e.g. "100 birr"
   freeLabel: "Free",
-  logoImage: "ju-logo.png",                              
+  logoImage: "ju-logo.png",
   appScreenshots: [ "screen1.jpg", "screen2.jpg", "screen3.jpg" ]
 };
 /* ====================== */
@@ -627,11 +610,12 @@ document.querySelectorAll('[data-link]').forEach(a=>{
 $$('[data-cfg]').forEach(e=>e.textContent=CONFIG[e.dataset.cfg]);
 $('#yr').textContent=new Date().getFullYear();
 
-/* Optional custom header logo image */
+/* Load custom header + footer logo image */
 if(CONFIG.logoImage){
-  const img=$('#custom-logo');
-  img.src=CONFIG.logoImage;
-  img.onload=()=>{img.style.display='block';img.nextElementSibling.style.display='none';};
+  $$('.custom-logo').forEach(img=>{
+    img.src=CONFIG.logoImage;
+    img.onload=()=>{img.style.display='block';if(img.nextElementSibling)img.nextElementSibling.style.display='none';};
+  });
 }
 
 /* Load real app screenshots into phone mockup if provided */
@@ -641,7 +625,10 @@ if(Array.isArray(CONFIG.appScreenshots) && CONFIG.appScreenshots.length){
     if(!url) return;
     const img=scr.querySelector('.real-shot');
     img.src=url;
-    img.onload=()=>scr.classList.add('has-real');
+    img.onload=()=>{
+      scr.classList.add('has-real');
+      $('.phone').classList.add('full-shot');
+    };
   });
 }
 
@@ -714,18 +701,16 @@ $$('.fc').forEach(c=>{
 
 /* Hero phone screen switcher + 3D hover tilt */
 (()=>{
-  const screens=$$('.pscr'), navs=$$('.pnav span[data-go]'), dots=$$('.pdots button');
+  const screens=$$('.pscr'), dots=$$('.pdots button');
   let i=0, timer;
   function show(idx){
     screens[i].classList.remove('on');
     i=idx%screens.length;
     screens[i].classList.add('on');
-    navs.forEach(n=>n.classList.toggle('on',+n.dataset.go===i));
     dots.forEach((d,j)=>d.classList.toggle('on',j===i));
   }
   function start(){timer=setInterval(()=>show(i+1),3600)}
   function reset(idx){clearInterval(timer);show(idx);start()}
-  navs.forEach(n=>n.onclick=()=>reset(+n.dataset.go));
   dots.forEach(d=>d.onclick=()=>reset(+d.dataset.go));
   start();
 
